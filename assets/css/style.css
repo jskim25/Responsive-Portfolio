@@ -44,37 +44,39 @@ p:last-child {
     background-color: #ffffff;
 }
 
-.name {
+.logo {
     width: 250px;
     height: 90px;
-    background-color: #4aaaa5;
-    color: #ffffff;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-size: 30px;
-    font-weight: bold;
     line-height: 90px;
-    text-decoration: none;
+    background-color: #4aaaa5;
     text-align: center;
 }
 
-nav {
-    color: #cccccc;
-    width: 275px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.name {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: bold;
 }
 
-nav a {
-    padding-left: 15px;
-    margin-left: 15px;
-    line-height: 15px;
-    color: #999999;
-    text-decoration: none;
+nav ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
+
+nav li {
     border-left: 1px solid #efefef;
 }
 
-nav a:first-child {
+nav a {
+    text-decoration: none;
+    color: #777777;
+    padding: 10px;
+}
+
+nav li:first-child {
     border-left: none;
 }
 
@@ -103,7 +105,6 @@ h1 {
     background-color: #ffffff;
     margin-top: 40px;
     margin-bottom: 40px;
-    margin-left: 10px;
     padding: 20px;
     border: 1px solid #dddddd;
 }
@@ -135,7 +136,6 @@ h2 {
 
 .sidebar {
     background-color: #ffffff;
-    display: flex;
     width: 100%;
     max-width: 270px;
     padding: 30px;
@@ -234,4 +234,82 @@ h3 {
     margin-bottom: 0px;
     line-height: 30px;
     text-align: center;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 980px) {
+    .container, .container2, .container3 {
+        max-width: 768px;
+        padding: 0 20px;
+    }
+
+    .main-section {
+        max-width: 420px;
+    }
+
+    .image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container, .container2, .container {
+        max-width: 640px;
+    }
+
+    .container2 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-section {
+        max-width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .image {
+        width: 50%;
+    }
+
+    .sidebar {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 100vw;
+        margin-left: -20px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav li {
+        margin-bottom: 15px;
+        padding-left: 10px;
+    }
+
+    .image {
+        width: 100%;
+    }
 }
